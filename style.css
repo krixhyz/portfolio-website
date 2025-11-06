@@ -335,23 +335,28 @@ section {
 
 .article-container {
   display: flex;
-  text-align: initial;
   flex-wrap: wrap;
-  flex-direction: row;
   gap: 2.5rem;
   justify-content: space-around;
+  align-items: flex-start; /* makes sure all top-align evenly */
+  text-align: initial;
 }
 
 article {
   display: flex;
+  align-items: center; /* vertically center icon + text */
+  gap: 0.8rem;         /* consistent gap */
   width: 10rem;
-  justify-content: space-around;
-  gap: 0.5rem;
+  justify-content: flex-start; /* prevent uneven spacing */
 }
 
 article .icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
   cursor: default;
 }
+
 
 /* PROJECTS SECTION */
 
