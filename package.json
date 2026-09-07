@@ -6,7 +6,11 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite",
-    "optimize:images": "node tools/optimize-images.cjs"
+    "optimize:images": "node tools/optimize-images.cjs",
+      "preview": "vite preview",
+
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "1.2.3",
@@ -57,6 +61,7 @@
   "devDependencies": {
     "@tailwindcss/vite": "4.1.12",
     "@vitejs/plugin-react": "4.7.0",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "4.1.12",
     "vite": "6.3.5"
   },
